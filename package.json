@@ -1,0 +1,31 @@
+{
+  "name": "geenee-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "homepage": "",
+  "author": {
+    "name": "zignage",
+    "email": "vasyl@zignage.com"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist:linux": "electron-builder --linux deb"
+  },
+  "build": {
+    "appId": "com.zignage.geeneeapp",
+    "productName": "GeeneeApp",
+    "directories": {
+      "buildResources": "resources",
+      "output": "dist"
+    },
+    "linux": {
+      "category": "Utility",
+      "artifactName": "${productName}-${version}-${arch}.deb",
+      "icon": "build/icon.png"
+    }
+  },
+  "devDependencies": {
+    "electron": "^34.0.1",
+    "electron-builder": "^25.1.8"
+  }
+}
